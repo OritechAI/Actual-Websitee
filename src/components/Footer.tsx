@@ -16,11 +16,10 @@ const Footer = () => {
               <div className="w-8 h-8 bg-oritech-red rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">AI</span>
               </div>
-              <span className="text-lg lg:text-xl font-black text-white">OritechAI</span>
+              <span className="text-lg lg:text-xl font-black text-white">OriTech AI</span>
             </div>
             <p className="text-sm lg:text-base text-gray-200 font-medium mb-6">
-              Transforming businesses through strategic AI consulting and implementation.
-              Your partner in the AI revolution.
+              Built around the Blueprint. We only implement what drives outcomes.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-300 hover:text-oritech-red transition-colors">
@@ -77,7 +76,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm lg:text-base text-gray-300 font-medium mb-6 md:mb-0">
-            © 2025 OritechAI. All rights reserved.
+            © 2025 OriTech AI. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">

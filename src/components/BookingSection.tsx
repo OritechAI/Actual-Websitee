@@ -1,22 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 
 const BookingSection = () => {
-  const openCalendly = () => {
-    window.open('https://calendly.com/selenica3/15min', '_blank');
+  const startBlueprint = () => {
+    window.open('/blueprint?utm_source=oritech_landing&utm_medium=cta&utm_campaign=blueprint', '_self');
   };
 
-  const benefits = [
-    "Comprehensive AI readiness assessment",
-    "Custom automation opportunity analysis", 
-    "ROI projections for AI implementations",
-    "Priority action plan with timeline",
-    "No obligation consultation"
-  ];
+  const bookCall = () => {
+    window.open('/contact?utm_source=oritech_landing&utm_medium=cta&utm_campaign=blueprint', '_self');
+  };
 
   return (
-    <section id="booking" className="section-spacing">
+    <section id="booking" className="section-spacing bg-black bg-opacity-70">
       <div className="text-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -26,77 +22,33 @@ const BookingSection = () => {
           className="text-center"
         >
           <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
-            Ready to <span className="text-oritech-red">Transform Your Business</span> with AI?
+            Start the <span className="text-oritech-red">Blueprint</span>.
           </h2>
-          <p className="text-base lg:text-lg text-gray-100 font-medium max-w-4xl mx-auto subheading-spacing text-shadow">
-            Book your free AI audit call today and discover exactly how AI can cut your costs,
-            boost efficiency, and accelerate growth.
+          <p className="text-base lg:text-lg text-gray-100 font-medium max-w-2xl mx-auto subheading-spacing text-shadow">
+            Bring your numbers. Leave with a 30-day plan.
           </p>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mt-12">
-          {/* Left side - Benefits */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 rounded-xl border border-gray-600">
-              <h3 className="text-lg lg:text-xl font-black text-white mb-6">What You'll Get in Your Free Audit:</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-oritech-gold mt-0.5 flex-shrink-0" />
-                    <span className="text-sm lg:text-base text-gray-100 font-medium">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="mt-8 p-6 bg-oritech-red bg-opacity-10 rounded-lg border border-oritech-red">
-                <div className="flex items-center gap-3 mb-3">
-                  <Clock className="w-5 h-5 text-oritech-gold" />
-                  <span className="font-bold text-white text-base lg:text-lg">15-Minute Intro Call</span>
-                </div>
-                <p className="text-sm lg:text-base text-gray-100 font-medium">
-                  Get actionable insights you can implement immediately, even if you don't work with us.
-                </p>
-              </div>
-            </div>
-          </motion.div>
           
-          {/* Right side - Booking Form/Calendar */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 rounded-xl border border-gray-600 text-center">
-              <div className="text-center mb-8">
-                <Calendar className="w-12 h-12 text-oritech-red mx-auto mb-4" />
-                <h3 className="text-lg lg:text-xl font-black text-white mb-4">Ready to Get Started?</h3>
-                <p className="text-base lg:text-lg text-gray-100 font-medium mb-8">Enough Already!</p>
-              </div>
-              
-              {/* Calendly inline widget begin */}
-              {/* Schedule Call Button */}
-              <motion.button
-                onClick={openCalendly}
-                className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 mb-6"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Book a Call Now
-              </motion.button>
-              
-              <div className="flex items-center justify-center gap-2 text-oritech-red font-semibold">
-                <CheckCircle className="w-4 h-4" />
-                <span className="font-bold text-sm lg:text-base">100% Free • No Commitment Required</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <motion.button
+              onClick={startBlueprint}
+              className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Start Free Blueprint <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
+            </motion.button>
+            
+            <motion.button
+              onClick={bookCall}
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Phone className="w-5 h-5 lg:w-6 lg:h-6" />
+              Book a Call
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
