@@ -1,14 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const startBlueprint = () => {
     window.open('/blueprint?utm_source=oritech_landing&utm_medium=cta&utm_campaign=blueprint', '_self');
-  };
-
-  const seeCaseStudies = () => {
-    window.open('/case-studies?utm_source=oritech_landing&utm_medium=cta&utm_campaign=blueprint', '_self');
   };
 
   return (
@@ -32,7 +28,7 @@ const Hero = () => {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <div className="flex justify-center mb-8">
             <motion.button
               onClick={startBlueprint}
               className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
@@ -40,16 +36,6 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               Start Free Blueprint <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
-            </motion.button>
-            
-            <motion.button
-              onClick={seeCaseStudies}
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <PlayCircle className="w-5 h-5 lg:w-6 lg:h-6" />
-              See Case Studies
             </motion.button>
           </div>
           
