@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Template, ArrowRight } from 'lucide-react';
+import { FileText, BookTemplate as Template, ArrowRight } from 'lucide-react';
 
 const PopularPlaybooks = () => {
   const playbooks = [
