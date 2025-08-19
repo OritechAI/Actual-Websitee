@@ -3,14 +3,6 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Target, Clock, DollarSign, Star, TrendingUp } from 'lucide-react';
 
 const ProblemStatement = () => {
-  const kpis = [
-    "Direct bookings ↑",
-    "Response time ↓", 
-    "RevPAR ↑",
-    "Review volume ↑",
-    "Upsell attach ↑"
-  ];
-
   const painPoints = [
     {
       icon: <ExternalLink className="w-8 h-8 text-oritech-red" />,
@@ -40,33 +32,7 @@ const ProblemStatement = () => {
   ];
 
   return (
-    <>
-      {/* Proof Strip */}
-      <section className="py-8 lg:py-12 bg-black bg-opacity-50">
-        <div className="text-container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-8 text-white font-medium">
-              {kpis.map((kpi, index) => (
-                <span key={index} className="text-sm lg:text-base text-gray-100 text-shadow">
-                  {kpi}
-                </span>
-              ))}
-            </div>
-            <p className="text-xs lg:text-sm text-gray-300 mt-4 text-shadow-sm">
-              (We track these five KPIs daily.)
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* The 5 Pain Points We Fix */}
-      <section className="section-spacing">
+    <section className="section-spacing">
         <div className="text-container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -99,8 +65,7 @@ const ProblemStatement = () => {
             ))}
           </div>
         </div>
-      </section>
-    </>
+    </section>
   );
 };
 
