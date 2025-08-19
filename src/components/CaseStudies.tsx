@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -35,10 +35,6 @@ const CaseStudies = () => {
       link: "#"
     }
   ];
-
-  const seeAllCaseStudies = () => {
-    window.open('/case-studies', '_self');
-  };
 
   return (
     <section className="section-spacing">
@@ -93,17 +89,6 @@ const CaseStudies = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="flex justify-center mt-12">
-          <motion.button
-            onClick={seeAllCaseStudies}
-            className="bg-transparent border-2 border-oritech-red text-oritech-red hover:bg-oritech-red hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 flex items-center gap-3"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            See All Case Studies <ArrowRight className="w-5 h-5" />
-          </motion.button>
         </div>
       </div>
     </section>

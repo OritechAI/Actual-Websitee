@@ -98,27 +98,6 @@ const ProblemStatement = () => {
               </motion.div>
             ))}
           </div>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
-            <a 
-              href="/playbook/pain-points"
-              className="bg-transparent border-2 border-oritech-red text-oritech-red hover:bg-oritech-red hover:text-white font-bold px-6 py-3 rounded-lg text-base transition-all duration-300 text-center"
-            >
-              Pain Points
-            </a>
-            <a 
-              href="/playbook/how-to-fix"
-              className="bg-transparent border-2 border-oritech-red text-oritech-red hover:bg-oritech-red hover:text-white font-bold px-6 py-3 rounded-lg text-base transition-all duration-300 text-center"
-            >
-              How to Fix
-            </a>
-            <a 
-              href="/playbook/kpi"
-              className="bg-transparent border-2 border-oritech-red text-oritech-red hover:bg-oritech-red hover:text-white font-bold px-6 py-3 rounded-lg text-base transition-all duration-300 text-center"
-            >
-              KPI Targets
-            </a>
-          </div>
         </div>
       </section>
     </>
