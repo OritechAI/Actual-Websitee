@@ -5,7 +5,6 @@ import Services from './components/Services';
 import WhyWorkWithUs from './components/WhyWorkWithUs';
 import OurProcess from './components/OurProcess';
 import CaseStudies from './components/CaseStudies';
-import PopularPlaybooks from './components/PopularPlaybooks';
 import FAQ from './components/FAQ';
 import BookingSection from './components/BookingSection';
 import Footer from './components/Footer';
@@ -24,7 +23,6 @@ function App() {
         <WhyWorkWithUs />
         <OurProcess />
         <CaseStudies />
-        <PopularPlaybooks />
         <FAQ />
         <BookingSection />
         <Footer />
