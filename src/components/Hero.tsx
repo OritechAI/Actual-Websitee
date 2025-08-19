@@ -41,7 +41,7 @@ const Hero = () => {
           
           {/* Trust Line */}
           <p className="text-sm lg:text-base text-gray-300 font-medium text-shadow">
-            Used by independents, boutiques, groups, and travel agencies.
+            Used by independents, hotels, groups, and travel agencies.
           </p>
         </motion.div>
       </div>
