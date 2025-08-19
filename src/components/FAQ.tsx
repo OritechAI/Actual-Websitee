@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 const FAQ = () => {
   const faqs = [
@@ -46,10 +45,6 @@ const FAQ = () => {
     }
   ];
 
-  const seeFullFAQ = () => {
-    window.open('/faq', '_self');
-  };
-
   return (
     <section className="section-spacing">
       <div className="text-container">
@@ -79,17 +74,6 @@ const FAQ = () => {
               <p className="text-sm lg:text-base text-gray-200 font-medium">{faq.answer}</p>
             </motion.div>
           ))}
-        </div>
-
-        <div className="flex justify-center mt-12">
-          <motion.button
-            onClick={seeFullFAQ}
-            className="bg-transparent border-2 border-oritech-red text-oritech-red hover:bg-oritech-red hover:text-white font-bold px-8 py-4 rounded-lg text-lg transition-all duration-300 flex items-center gap-3"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            See Full FAQ <ArrowRight className="w-5 h-5" />
-          </motion.button>
         </div>
       </div>
     </section>
