@@ -46,7 +46,7 @@ const CaseStudies = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
+          <h2 className="text-xl lg:text-2xl xl:text-3xl font-black text-white heading-spacing text-shadow-lg">
             Case Studies <span className="text-oritech-red">(teasers)</span>
           </h2>
         </motion.div>
@@ -63,10 +63,10 @@ const CaseStudies = () => {
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="text-base font-bold text-white">
                     {study.hotel} <span className="text-oritech-red">{study.category}</span>
                   </h3>
-                  <p className="text-sm lg:text-base text-gray-200 font-medium mt-2">{study.result}</p>
+                  <p className="text-xs lg:text-sm text-gray-200 font-medium mt-2">{study.result}</p>
                 </div>
                 <a 
                   href={study.link} 
@@ -82,7 +82,7 @@ const CaseStudies = () => {
                   href={study.link}
                   target="_blank"
                   rel="noopener noreferrer" 
-                  className="text-sm text-oritech-red font-semibold hover:text-red-300 transition-colors"
+                  className="text-xs text-oritech-red font-semibold hover:text-red-300 transition-colors"
                 >
                   Read full article →
                 </a>

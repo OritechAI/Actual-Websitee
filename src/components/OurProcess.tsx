@@ -36,7 +36,7 @@ const OurProcess = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
+          <h2 className="text-xl lg:text-2xl xl:text-3xl font-black text-white heading-spacing text-shadow-lg">
             How It <span className="text-oritech-red">Works</span>
           </h2>
         </motion.div>
@@ -59,8 +59,8 @@ const OurProcess = () => {
                 <div className="flex justify-center mb-4">
                   {step.icon}
                 </div>
-                <h3 className="text-lg lg:text-xl font-black text-white mb-4">{step.title}</h3>
-                <p className="text-sm lg:text-base text-gray-100 font-medium">{step.description}</p>
+                <h3 className="text-base lg:text-lg font-black text-white mb-4">{step.title}</h3>
+                <p className="text-xs lg:text-sm text-gray-100 font-medium">{step.description}</p>
               </div>
               
               {index < steps.length - 1 && (

@@ -41,7 +41,7 @@ const ProblemStatement = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
+            <h2 className="text-xl lg:text-2xl xl:text-3xl font-black text-white heading-spacing text-shadow-lg">
               The <span className="text-oritech-red">5 Pain Points</span> We Fix
             </h2>
           </motion.div>
@@ -59,8 +59,8 @@ const ProblemStatement = () => {
                 <div className="flex justify-center mb-4">
                   {point.icon}
                 </div>
-                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">{point.title}</h3>
-                <p className="text-sm lg:text-base text-gray-200 font-medium">{point.description}</p>
+                <h3 className="text-base lg:text-lg font-bold text-white mb-3">{point.title}</h3>
+                <p className="text-xs lg:text-sm text-gray-200 font-medium">{point.description}</p>
               </motion.div>
             ))}
           </div>

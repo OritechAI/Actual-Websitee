@@ -50,7 +50,7 @@ const WhyWorkWithUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
+          <h2 className="text-xl lg:text-2xl xl:text-3xl font-black text-white heading-spacing text-shadow-lg">
             Where We Move <span className="text-oritech-red">Numbers</span> (targets)
           </h2>
         </motion.div>
@@ -68,11 +68,11 @@ const WhyWorkWithUs = () => {
               <div className="flex items-center gap-4 mb-4">
                 {item.icon}
                 <div>
-                  <h3 className="text-lg lg:text-xl font-black text-white">{item.title}</h3>
-                  <p className="text-sm lg:text-base text-oritech-red font-semibold">{item.subtitle}</p>
+                  <h3 className="text-base lg:text-lg font-black text-white">{item.title}</h3>
+                  <p className="text-xs lg:text-sm text-oritech-red font-semibold">{item.subtitle}</p>
                 </div>
               </div>
-              <p className="text-sm lg:text-base text-gray-200 font-medium">{item.target}</p>
+              <p className="text-xs lg:text-sm text-gray-200 font-medium">{item.target}</p>
             </motion.div>
           ))}
         </div>
@@ -80,7 +80,7 @@ const WhyWorkWithUs = () => {
         <div className="flex justify-center mt-12">
           <motion.button
             onClick={bookBlueprint}
-            className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
+            className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-base lg:text-lg transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

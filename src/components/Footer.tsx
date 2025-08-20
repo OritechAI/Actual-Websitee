@@ -33,20 +33,20 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-base lg:text-lg font-bold text-white mb-6">Quick Links</h4>
+            <h4 className="text-sm lg:text-base font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-sm lg:text-base text-gray-200 font-medium hover:text-oritech-red transition-colors">
+                <a href="#services" className="text-xs lg:text-sm text-gray-200 font-medium hover:text-oritech-red transition-colors">
                   AI Consulting Services
                 </a>
               </li>
               <li>
-                <a href="#process" className="text-sm lg:text-base text-gray-200 font-medium hover:text-oritech-red transition-colors">
+                <a href="#process" className="text-xs lg:text-sm text-gray-200 font-medium hover:text-oritech-red transition-colors">
                   Our Process
                 </a>
               </li>
               <li>
-                <a href="#booking" className="text-sm lg:text-base text-gray-200 font-medium hover:text-oritech-red transition-colors">
+                <a href="#booking" className="text-xs lg:text-sm text-gray-200 font-medium hover:text-oritech-red transition-colors">
                   Book Free Audit
                 </a>
               </li>
@@ -55,19 +55,19 @@ const Footer = () => {
           
           {/* Contact Info */}
           <div>
-            <h4 className="text-base lg:text-lg font-bold text-white mb-6">Get In Touch</h4>
+            <h4 className="text-sm lg:text-base font-bold text-white mb-6">Get In Touch</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-oritech-red" />
-                <span className="text-sm lg:text-base text-gray-200 font-medium">selenica3@gmail.com</span>
+                <span className="text-xs lg:text-sm text-gray-200 font-medium">selenica3@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-oritech-red" />
-                <span className="text-sm lg:text-base text-gray-200 font-medium">+1 (407) 406-9101</span>
+                <span className="text-xs lg:text-sm text-gray-200 font-medium">+1 (407) 406-9101</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-oritech-red" />
-                <span className="text-sm lg:text-base text-gray-200 font-medium">Internacional</span>
+                <span className="text-xs lg:text-sm text-gray-200 font-medium">Internacional</span>
               </div>
             </div>
           </div>
@@ -75,19 +75,19 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm lg:text-base text-gray-300 font-medium mb-6 md:mb-0">
+          <p className="text-xs lg:text-sm text-gray-300 font-medium mb-6 md:mb-0">
             © 2025 OriTech AI. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy-policy" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
+            <a href="/privacy-policy" className="text-xs lg:text-sm text-gray-300 font-medium hover:text-oritech-red transition-colors">
               Privacy Policy
             </a>
-            <a href="/terms-of-service" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
+            <a href="/terms-of-service" className="text-xs lg:text-sm text-gray-300 font-medium hover:text-oritech-red transition-colors">
               Terms of Service
             </a>
             <button 
               onClick={scrollToTop}
-              className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors"
+              className="text-xs lg:text-sm text-gray-300 font-medium hover:text-oritech-red transition-colors"
             >
               Back to Top ↑
             </button>

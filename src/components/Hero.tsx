@@ -17,12 +17,12 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white heading-spacing leading-tight text-shadow-lg">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-white heading-spacing leading-tight text-shadow-lg">
             We don't sell AI automation. We sell <span className="text-oritech-red text-shadow-lg">outcomes</span>.
           </h1>
           
           {/* Subheadline */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-100 font-medium subheading-spacing max-w-4xl mx-auto text-shadow">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-100 font-medium subheading-spacing max-w-4xl mx-auto text-shadow">
             Start with our Free Blueprint—diagnose the real problems, pick the right AI use cases, 
             then build only what moves your numbers.
           </p>
@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="flex justify-center mb-8">
             <motion.button
               onClick={bookBlueprint}
-              className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
+              className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-base lg:text-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
           
           {/* Trust Line */}
-          <p className="text-sm lg:text-base text-gray-300 font-medium text-shadow">
+          <p className="text-xs lg:text-sm text-gray-300 font-medium text-shadow">
             Used by independents, hotels, groups, and travel agencies.
           </p>
         </motion.div>

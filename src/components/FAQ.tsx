@@ -55,7 +55,7 @@ const FAQ = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
+          <h2 className="text-xl lg:text-2xl xl:text-3xl font-black text-white heading-spacing text-shadow-lg">
             Frequently Asked <span className="text-oritech-red">Questions</span>
           </h2>
         </motion.div>
@@ -70,8 +70,8 @@ const FAQ = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="bg-black bg-opacity-80 backdrop-blur-sm p-6 rounded-xl border border-gray-600"
             >
-              <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
-              <p className="text-sm lg:text-base text-gray-200 font-medium">{faq.answer}</p>
+              <h3 className="text-base font-bold text-white mb-3">{faq.question}</h3>
+              <p className="text-xs lg:text-sm text-gray-200 font-medium">{faq.answer}</p>
             </motion.div>
           ))}
         </div>
