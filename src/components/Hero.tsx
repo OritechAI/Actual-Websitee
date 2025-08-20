@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
-  const startBlueprint = () => {
-    window.open('/blueprint?utm_source=oritech_landing&utm_medium=cta&utm_campaign=blueprint', '_self');
+  const bookBlueprint = () => {
+    window.open('https://calendly.com/selenica3/15min', '_blank');
   };
 
   return (
@@ -30,12 +30,12 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex justify-center mb-8">
             <motion.button
-              onClick={startBlueprint}
+              onClick={bookBlueprint}
               className="bg-oritech-red hover:bg-red-700 text-white font-bold button-padding rounded-lg text-lg lg:text-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Start Free Blueprint <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
+              Book a Free Blueprint <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6" />
             </motion.button>
           </div>
           
