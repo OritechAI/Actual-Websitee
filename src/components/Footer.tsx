@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -22,11 +22,11 @@ const Footer = () => {
               Built around the Blueprint. We only implement what drives outcomes.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-300 hover:text-oritech-red transition-colors">
+              <a href="https://www.linkedin.com/in/andi-selenica-b49904348/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-oritech-red transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-oritech-red transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.instagram.com/andiselenica.ai/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-oritech-red transition-colors">
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-oritech-red" />
-                <span className="text-sm lg:text-base text-gray-200 font-medium">info@oritechai.com</span>
+                <span className="text-sm lg:text-base text-gray-200 font-medium">selenica3@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-oritech-red" />
@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-oritech-red" />
-                <span className="text-sm lg:text-base text-gray-200 font-medium">San Francisco, CA • Tirana, Albania</span>
+                <span className="text-sm lg:text-base text-gray-200 font-medium">Internacional</span>
               </div>
             </div>
           </div>
@@ -79,10 +79,10 @@ const Footer = () => {
             © 2025 OriTech AI. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
+            <a href="/privacy-policy" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
+            <a href="/terms-of-service" className="text-sm lg:text-base text-gray-300 font-medium hover:text-oritech-red transition-colors">
               Terms of Service
             </a>
             <button 
