@@ -16,7 +16,8 @@ import {
   Award,
   Target,
   DollarSign,
-  BarChart3
+  BarChart3,
+  ArrowLeft
 } from 'lucide-react';
 
 const WorkshopLanding = () => {
@@ -28,6 +29,10 @@ const WorkshopLanding = () => {
 
   const toggleAgenda = () => {
     setShowAgenda(!showAgenda);
+  };
+
+  const goHome = () => {
+    window.location.href = '/';
   };
 
   const painPoints = [
@@ -195,8 +200,29 @@ const WorkshopLanding = () => {
 
   return (
     <div className="min-h-screen bg-oritech-black">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-700">
+        <div className="text-container py-4">
+          <div className="flex items-center justify-between">
+            <button
+              onClick={goHome}
+              className="flex items-center gap-2 text-oritech-red hover:text-red-300 transition-colors font-medium"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Homepage
+            </button>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-oritech-red rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">AI</span>
+              </div>
+              <span className="text-lg font-black text-white">OriTech AI</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="section-spacing pt-16 lg:pt-24 pb-12 lg:pb-16">
+      <section className="section-spacing pt-24 lg:pt-32 pb-12 lg:pb-16">
         <div className="text-container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -269,7 +295,7 @@ const WorkshopLanding = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center bg-black bg-opacity-80 p-6 rounded-xl border border-gray-600"
+                  className="text-center bg-black bg-opacity-80 p-6 rounded-xl border border-gray-600 shadow-lg"
                 >
                   <div className="bg-oritech-red text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
                     {item.duration}
@@ -314,7 +340,7 @@ const WorkshopLanding = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-6 bg-gray-900 bg-opacity-60 rounded-xl border border-gray-700"
+                  className="flex items-start gap-4 p-6 bg-gray-900 bg-opacity-60 rounded-xl border border-gray-700 shadow-lg"
                 >
                   <div className="w-4 h-4 bg-oritech-red rounded-full flex-shrink-0 mt-2"></div>
                   <p className="text-gray-200 font-medium text-base lg:text-lg leading-relaxed">{pain}</p>
@@ -443,7 +469,7 @@ const WorkshopLanding = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex flex-col lg:flex-row items-start gap-6 mb-8 last:mb-0"
               >
-                <div className="bg-oritech-red text-white w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center font-bold text-base lg:text-lg flex-shrink-0 mx-auto lg:mx-0">
+                <div className="bg-oritech-red text-white w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center font-bold text-base lg:text-lg flex-shrink-0 mx-auto lg:mx-0 shadow-xl">
                   {item.duration}
                 </div>
                 <div className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 flex-1 shadow-xl hover:border-oritech-red transition-all duration-300">
@@ -527,7 +553,7 @@ const WorkshopLanding = () => {
               Join 200+ hotel owners who've discovered how AI automation saves time and increases revenue without replacing staff.
             </p>
             
-            <div className="bg-black bg-opacity-30 backdrop-blur-sm p-8 lg:p-10 rounded-2xl border border-white border-opacity-20 max-w-2xl mx-auto mb-8">
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm p-8 lg:p-10 rounded-2xl border border-white border-opacity-20 max-w-2xl mx-auto mb-8 shadow-xl">
               <h3 className="text-xl font-bold text-white mb-6">Your Free Workshop Includes:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center gap-3">
