@@ -19,6 +19,7 @@ import {
   BarChart3,
   ArrowLeft
 } from 'lucide-react';
+import WorkshopSchema from './WorkshopSchema';
 
 const WorkshopLanding = () => {
   const [showAgenda, setShowAgenda] = useState(false);
@@ -200,6 +201,8 @@ const WorkshopLanding = () => {
 
   return (
     <div className="min-h-screen bg-oritech-black">
+      <WorkshopSchema />
+      
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-700">
         <div className="text-container py-4">
