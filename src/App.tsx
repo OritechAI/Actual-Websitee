@@ -13,6 +13,7 @@ import Schema from './components/Schema';
 import VideoBackground from './components/VideoBackground';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import WorkshopLanding from './components/WorkshopLanding';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/workshop" element={<WorkshopLanding />} />
           <Route path="/" element={
             <>
               <Schema />
