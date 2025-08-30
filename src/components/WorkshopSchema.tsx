@@ -4,8 +4,8 @@ const WorkshopSchema = () => {
   const workshopSchema = {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "Free AI Blueprint Workshop for Hotels",
-    "description": "Free 45-minute workshop teaching hotels how to save 200+ staff hours, boost direct bookings, and improve guest reviews using AI automation. Learn hotel automation strategies from real case studies.",
+    "name": "Oritech AI Blueprint Workshop for Hotels",
+    "description": "Free 45-minute workshop teaching hotels how to save 200+ staff hours, boost direct bookings, and improve guest reviews using AI automation. Learn hotel automation strategies from real case studies with measurable KPIs.",
     "keywords": "AI workshop for hotels, hotel automation, save staff hours, reduce OTA dependency, improve guest reviews, direct bookings, AI for hotels",
     "startDate": "2025-01-17T14:00:00-05:00",
     "endDate": "2025-01-17T14:45:00-05:00",
@@ -29,7 +29,7 @@ const WorkshopSchema = () => {
     },
     "audience": {
       "@type": "Audience",
-      "audienceType": "Hotel owners, managers, and revenue teams"
+      "audienceType": "Hotel owners, general managers, revenue managers, and operations teams looking to implement AI automation"
     }
   };
 

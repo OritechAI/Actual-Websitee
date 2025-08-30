@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import WorkshopSchema from './WorkshopSchema';
 import { 
   ArrowRight, 
+  Calendar,
   Clock, 
   Users, 
   TrendingUp, 
   Star, 
   CheckCircle, 
-  Calendar,
-  BarChart3,
-  MessageSquare,
-  Award,
   ChevronDown,
   Phone,
   Mail,
   ExternalLink,
+  MessageSquare,
+  Award,
+  Target,
   DollarSign,
-  Target
+  BarChart3
 } from 'lucide-react';
 
 const WorkshopLanding = () => {
@@ -32,153 +31,172 @@ const WorkshopLanding = () => {
   };
 
   const painPoints = [
-    "Staff drowning in repetitive guest queries and check-in processes",
-    "OTA commissions eating 15-25% of revenue with no alternative strategy", 
-    "Reviews trickling in too slowly, hurting online reputation",
-    "Manual pricing missing revenue opportunities during high-demand periods",
-    "Upsells and room upgrades forgotten in the daily operational rush"
+    "Staff overwhelmed with repetitive guest queries, check-ins, and manual tasks",
+    "OTA commissions eating 15-25% of revenue with no clear path to reduce dependency", 
+    "Reviews coming in too slowly, hurting online reputation and booking potential",
+    "Manual pricing strategies missing revenue opportunities during peak demand",
+    "Upsell opportunities consistently missed due to operational focus"
   ];
 
   const learningPoints = [
     {
       icon: <Clock className="w-8 h-8 text-oritech-red" />,
       title: "Save Staff Hours",
-      description: "Learn how AI automation reduces manual tasks by 200+ hours monthly",
-      keyword: "save staff hours"
+      description: "Proven AI automation strategies that reduce manual tasks by 200+ hours monthly",
+      seoKeyword: "save staff hours"
     },
     {
       icon: <ExternalLink className="w-8 h-8 text-oritech-red" />,
       title: "Reduce OTA Dependency", 
-      description: "Proven strategies to boost direct bookings and cut commission costs",
-      keyword: "reduce OTA dependency"
+      description: "Step-by-step methods to boost direct bookings and cut commission costs",
+      seoKeyword: "reduce OTA dependency"
     },
     {
       icon: <Star className="w-8 h-8 text-oritech-red" />,
       title: "Improve Guest Reviews",
-      description: "Systematic review collection for consistent 5-star experiences",
-      keyword: "improve guest reviews"
+      description: "Systematic review collection and response automation for consistent ratings",
+      seoKeyword: "improve guest reviews"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-oritech-red" />,
-      title: "Direct Bookings Growth",
-      description: "AI tools that convert website visitors to direct reservations",
-      keyword: "direct bookings"
+      title: "Direct Bookings Strategy",
+      description: "AI-powered tools that convert website visitors to direct reservations",
+      seoKeyword: "direct bookings"
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-oritech-red" />,
       title: "Hotel Automation Systems",
-      description: "Smart workflows that eliminate repetitive operational tasks",
-      keyword: "hotel automation"
+      description: "Smart workflows that handle guest communication and operational tasks",
+      seoKeyword: "hotel automation"
     },
     {
       icon: <Award className="w-8 h-8 text-oritech-red" />,
       title: "AI for Hotels ROI",
-      description: "Measurable returns from AI implementations in hospitality",
-      keyword: "AI for hotels"
+      description: "Measurable returns and KPIs from successful AI implementations",
+      seoKeyword: "AI for hotels"
     }
   ];
 
   const caseStudyKPIs = [
     {
       metric: "+14% Direct Bookings",
-      description: "Lake District Hotels reduced OTA dependency",
-      period: "90 days",
-      detail: "From 32% to 46% direct booking share"
+      hotel: "Lake District Hotels",
+      timeframe: "90 days",
+      detail: "Reduced OTA dependency from 68% to 54%",
+      icon: <TrendingUp className="w-12 h-12 text-white" />
     },
     {
       metric: "–220 Staff Hours",
-      description: "RIMC Hotels automated guest messaging",
-      period: "Monthly savings",
-      detail: "60% reduction in manual guest communications"
+      hotel: "RIMC Hotels & Resorts",
+      timeframe: "Monthly savings",
+      detail: "60% reduction in manual guest communications",
+      icon: <Clock className="w-12 h-12 text-white" />
     },
     {
       metric: "+0.3★ Review Lift",
-      description: "Samuel Braun Hotels review automation",
-      period: "6 months",
-      detail: "From 4.2 to 4.5 stars across all platforms"
+      hotel: "Samuel Braun Hotels",
+      timeframe: "6 months",
+      detail: "From 4.2 to 4.5 stars across all platforms",
+      icon: <Star className="w-12 h-12 text-white" />
     }
   ];
 
   const agenda = [
     {
-      time: "5 min",
+      duration: "5 min",
       title: "Hotel AI Diagnostic",
-      description: "Quick assessment of your current operational pain points and AI readiness"
+      description: "Quick assessment of your current operational challenges and AI readiness",
+      focus: "Pain point identification"
     },
     {
-      time: "25 min", 
+      duration: "25 min", 
       title: "3 Live Case Studies",
-      description: "Real results from hotels: staff time savings, booking increases, review improvements"
+      description: "Real implementations showing staff savings, booking increases, and review improvements",
+      focus: "Proven results walkthrough"
     },
     {
-      time: "10 min",
+      duration: "10 min",
       title: "Your Custom 90-Day Plan",
-      description: "Personalized AI implementation roadmap for your specific property type"
+      description: "Personalized AI implementation roadmap tailored to your property type and goals",
+      focus: "Actionable next steps"
     },
     {
-      time: "5 min",
-      title: "Q&A + Next Steps",
-      description: "Get your specific questions answered and optional Blueprint consultation"
+      duration: "5 min",
+      title: "Q&A + Resources",
+      description: "Get your specific questions answered plus free implementation templates",
+      focus: "Expert consultation"
     }
   ];
 
   const testimonials = [
     {
-      quote: "This AI workshop for hotels opened our eyes to automation opportunities we never considered. Implemented their guest messaging system and saved 15 hours a week instantly.",
+      quote: "This AI workshop for hotels completely changed our approach to automation. We implemented their guest messaging system and instantly saved 15 hours per week on repetitive inquiries.",
       author: "Sarah Martinez",
-      hotel: "Boutique Hotel Group",
+      position: "General Manager",
+      hotel: "Coastal Boutique Hotels",
       rating: 5,
-      result: "15 hours saved weekly"
+      result: "15 hours saved weekly",
+      location: "California"
     },
     {
-      quote: "Practical, actionable insights with zero fluff. Within 30 days we increased direct bookings by 12% using their proven strategies.",
+      quote: "Practical, actionable insights with zero fluff. The workshop showed us exactly how to reduce OTA dependency. Within 30 days we increased direct bookings by 12%.",
       author: "Marco Rodriguez", 
-      hotel: "Lake Resort Hotel",
+      position: "Revenue Manager",
+      hotel: "Mountain Lake Resort",
       rating: 5,
-      result: "+12% direct bookings"
+      result: "+12% direct bookings",
+      location: "Colorado"
     },
     {
-      quote: "Best 45 minutes I've spent on our business this year. The personalized 90-day plan gave us a clear roadmap to implement hotel automation successfully.",
-      author: "Lisa Kim",
-      hotel: "City Center Inn",
+      quote: "Best 45 minutes I've spent on our business this year. The personalized 90-day hotel automation plan gave us a clear roadmap to improve guest reviews and operational efficiency.",
+      author: "Lisa Chen",
+      position: "Owner",
+      hotel: "Downtown Business Hotel",
       rating: 5,
-      result: "Clear 90-day roadmap"
+      result: "Clear automation roadmap",
+      location: "New York"
     }
   ];
 
   const faqs = [
     {
       question: "Is this AI workshop for hotels really free?",
-      answer: "Yes, completely free. No hidden costs, no credit card required, no sales pitch. We believe in providing value first and building relationships through results."
+      answer: "Yes, completely free. No hidden costs, no credit card required, no pushy sales pitch. We believe in providing value first and building relationships through genuine results and insights."
     },
     {
-      question: "Who is this hotel automation workshop for?",
-      answer: "Hotel owners, general managers, revenue managers, and operations teams looking to save staff hours and reduce OTA dependency through AI automation."
+      question: "Who is this hotel automation workshop designed for?",
+      answer: "Hotel owners, general managers, revenue managers, operations teams, and anyone responsible for improving hotel efficiency while reducing costs. Perfect for independents, boutiques, and small hotel groups."
     },
     {
-      question: "What tools do I need for the workshop?",
-      answer: "Just your computer or phone with internet access. We'll provide everything else, including a personalized 90-day AI implementation plan."
+      question: "What tools do I need to attend the workshop?",
+      answer: "Just your computer, tablet, or smartphone with internet access. We'll provide everything else, including screen sharing for live demonstrations and a downloadable 90-day AI implementation plan."
     },
     {
       question: "What deliverables will I receive from this AI for hotels workshop?",
-      answer: "Custom 90-day AI roadmap, hotel automation case study templates, priority use-case list, and staff time savings calculator—all personalized for your property."
+      answer: "Custom 90-day AI roadmap, hotel automation case study templates, priority use-case checklist, staff time savings calculator, and direct booking optimization guide—all personalized for your specific property type."
     },
     {
       question: "How is this different from other AI workshops?",
-      answer: "We focus exclusively on practical hotel automation with real case studies, measurable KPIs, and immediate implementation steps—not theoretical AI concepts."
+      answer: "We focus exclusively on practical hotel automation with real case studies, measurable KPIs, and immediate implementation steps. No theoretical concepts—just proven strategies that save staff hours and increase revenue."
     },
     {
-      question: "Can I attend if I'm not tech-savvy?",
-      answer: "Absolutely. This workshop is designed for hotel professionals, not tech experts. We explain everything in simple terms with practical examples."
+      question: "Can I attend if I'm not technically experienced?",
+      answer: "Absolutely. This workshop is designed for hotel professionals, not tech experts. We explain everything in simple terms with practical examples that you can implement regardless of technical background."
+    },
+    {
+      question: "Will there be a recording available?",
+      answer: "While we don't provide recordings to maintain the interactive nature, all attendees receive comprehensive written summaries, implementation guides, and access to follow-up resources."
+    },
+    {
+      question: "What happens after the workshop?",
+      answer: "You'll have everything needed to start implementing AI automation immediately. Optionally, we offer a free Blueprint consultation to dive deeper into your specific property's automation opportunities."
     }
   ];
 
   return (
     <div className="min-h-screen bg-oritech-black">
-      <WorkshopSchema />
-      
       {/* Hero Section */}
-      <section className="section-spacing pt-16 lg:pt-24">
+      <section className="section-spacing pt-16 lg:pt-24 pb-12 lg:pb-16">
         <div className="text-container text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -209,13 +227,24 @@ const WorkshopLanding = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                See Agenda <ChevronDown className={`w-6 h-6 transition-transform ${showAgenda ? 'rotate-180' : ''}`} />
+                See Agenda <ChevronDown className={`w-6 h-6 transition-transform duration-300 ${showAgenda ? 'rotate-180' : ''}`} />
               </motion.button>
             </div>
             
-            <p className="text-sm lg:text-base text-gray-300 font-medium text-shadow">
-              ⏰ Next session: This Friday at 2 PM EST • 🎯 Limited to 20 hotels • 💯 100% Free
-            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-gray-300 text-sm lg:text-base font-medium">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-oritech-red" />
+                <span>This Friday at 2 PM EST</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-oritech-red" />
+                <span>Limited to 20 hotels</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-oritech-red" />
+                <span>100% Free</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -226,21 +255,29 @@ const WorkshopLanding = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="bg-black bg-opacity-80 border-t border-b border-gray-600"
+          transition={{ duration: 0.5 }}
+          className="bg-black bg-opacity-90 border-t border-b border-gray-600"
         >
-          <div className="text-container py-8">
+          <div className="text-container py-8 lg:py-12">
             <h3 className="text-xl lg:text-2xl font-bold text-white text-center mb-8">
               45-Minute Workshop Agenda
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {agenda.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-oritech-red text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">
-                    {item.time}
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center bg-black bg-opacity-80 p-6 rounded-xl border border-gray-600"
+                >
+                  <div className="bg-oritech-red text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                    {item.duration}
                   </div>
                   <h4 className="text-base font-bold text-white mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-200 font-medium">{item.description}</p>
-                </div>
+                  <p className="text-sm text-gray-200 font-medium mb-3">{item.description}</p>
+                  <p className="text-xs text-oritech-red font-semibold">{item.focus}</p>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -261,13 +298,13 @@ const WorkshopLanding = () => {
               Why This <span className="text-oritech-red">AI Workshop for Hotels</span> Matters
             </h2>
             <p className="text-lg text-gray-100 font-medium max-w-3xl mx-auto">
-              Most hotels struggle with the same operational challenges. This workshop shows you exactly how hotel automation solves them.
+              Most hotels face the same operational bottlenecks. This workshop reveals how hotel automation solves them systematically.
             </p>
           </motion.div>
           
-          <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 lg:p-12 rounded-2xl border border-gray-600 max-w-4xl mx-auto shadow-2xl">
-            <h3 className="text-xl font-bold text-white mb-8 text-center">
-              Sound familiar? You're not alone.
+          <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 lg:p-12 rounded-2xl border border-gray-600 max-w-5xl mx-auto shadow-2xl">
+            <h3 className="text-xl lg:text-2xl font-bold text-white mb-8 text-center">
+              Does this sound like your hotel? You're not alone.
             </h3>
             <div className="space-y-6">
               {painPoints.map((pain, index) => (
@@ -277,16 +314,16 @@ const WorkshopLanding = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start gap-4 p-4 bg-gray-900 bg-opacity-50 rounded-lg"
+                  className="flex items-start gap-4 p-6 bg-gray-900 bg-opacity-60 rounded-xl border border-gray-700"
                 >
-                  <div className="w-3 h-3 bg-oritech-red rounded-full flex-shrink-0 mt-2"></div>
-                  <p className="text-gray-200 font-medium text-lg">{pain}</p>
+                  <div className="w-4 h-4 bg-oritech-red rounded-full flex-shrink-0 mt-2"></div>
+                  <p className="text-gray-200 font-medium text-base lg:text-lg leading-relaxed">{pain}</p>
                 </motion.div>
               ))}
             </div>
-            <div className="text-center mt-8">
-              <p className="text-oritech-red font-bold text-lg">
-                ⬇️ Here's how successful hotels are solving these problems with AI
+            <div className="text-center mt-10">
+              <p className="text-oritech-red font-bold text-lg lg:text-xl">
+                ⬇️ Here's how successful hotels solve these problems with AI automation
               </p>
             </div>
           </div>
@@ -307,7 +344,7 @@ const WorkshopLanding = () => {
               What You'll <span className="text-oritech-red">Learn</span> in 45 Minutes
             </h2>
             <p className="text-lg text-gray-100 font-medium max-w-3xl mx-auto">
-              Practical AI for hotels strategies that you can start implementing immediately.
+              Practical hotel automation strategies that you can implement immediately after the workshop.
             </p>
           </motion.div>
           
@@ -319,16 +356,16 @@ const WorkshopLanding = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl hover:border-oritech-red transition-all duration-300"
+                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl hover:border-oritech-red transition-all duration-300 hover:shadow-2xl transform hover:scale-105"
               >
                 <div className="flex items-center gap-3 mb-4">
                   {point.icon}
-                  <h3 className="text-lg font-bold text-white">{point.title}</h3>
+                  <h3 className="text-lg lg:text-xl font-bold text-white">{point.title}</h3>
                 </div>
-                <p className="text-sm text-gray-200 font-medium leading-relaxed">{point.description}</p>
-                <div className="mt-3">
-                  <span className="text-xs text-oritech-red font-semibold px-2 py-1 bg-red-900 bg-opacity-30 rounded">
-                    {point.keyword}
+                <p className="text-sm lg:text-base text-gray-200 font-medium leading-relaxed mb-4">{point.description}</p>
+                <div className="inline-block">
+                  <span className="text-xs text-oritech-red font-semibold px-3 py-1 bg-red-900 bg-opacity-30 rounded-full border border-oritech-red border-opacity-30">
+                    {point.seoKeyword}
                   </span>
                 </div>
               </motion.div>
@@ -355,7 +392,7 @@ const WorkshopLanding = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {caseStudyKPIs.map((kpi, index) => (
               <motion.div
                 key={index}
@@ -365,10 +402,13 @@ const WorkshopLanding = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-oritech-red to-red-700 p-8 lg:p-10 rounded-2xl text-center text-white shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
               >
+                <div className="flex justify-center mb-6">
+                  {kpi.icon}
+                </div>
                 <h3 className="text-3xl lg:text-4xl xl:text-5xl font-black mb-4">{kpi.metric}</h3>
-                <p className="text-lg font-semibold mb-3">{kpi.description}</p>
-                <p className="text-sm opacity-90 mb-2">{kpi.period}</p>
-                <p className="text-xs opacity-80 border-t border-white border-opacity-30 pt-3">{kpi.detail}</p>
+                <p className="text-lg lg:text-xl font-semibold mb-3">{kpi.hotel}</p>
+                <p className="text-sm opacity-90 mb-2">{kpi.timeframe}</p>
+                <p className="text-xs opacity-80 border-t border-white border-opacity-30 pt-4">{kpi.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -389,11 +429,11 @@ const WorkshopLanding = () => {
               Workshop <span className="text-oritech-red">Agenda</span> (45 Minutes)
             </h2>
             <p className="text-lg text-gray-100 font-medium max-w-3xl mx-auto">
-              Every minute is designed to give you actionable insights for your hotel.
+              Every minute designed to give you actionable hotel automation insights.
             </p>
           </motion.div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {agenda.map((item, index) => (
               <motion.div
                 key={index}
@@ -401,14 +441,15 @@ const WorkshopLanding = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="flex items-start gap-6 mb-8 last:mb-0"
+                className="flex flex-col lg:flex-row items-start gap-6 mb-8 last:mb-0"
               >
-                <div className="bg-oritech-red text-white w-16 h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center font-bold text-sm lg:text-base flex-shrink-0">
-                  {item.time}
+                <div className="bg-oritech-red text-white w-20 h-20 lg:w-24 lg:h-24 rounded-2xl flex items-center justify-center font-bold text-base lg:text-lg flex-shrink-0 mx-auto lg:mx-0">
+                  {item.duration}
                 </div>
-                <div className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 flex-1 shadow-xl">
+                <div className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 flex-1 shadow-xl hover:border-oritech-red transition-all duration-300">
                   <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-gray-200 font-medium text-lg leading-relaxed">{item.description}</p>
+                  <p className="text-gray-200 font-medium text-base lg:text-lg leading-relaxed mb-3">{item.description}</p>
+                  <p className="text-sm text-oritech-red font-semibold">{item.focus}</p>
                 </div>
               </motion.div>
             ))}
@@ -430,7 +471,7 @@ const WorkshopLanding = () => {
               What <span className="text-oritech-red">Hotel Owners</span> Say
             </h2>
             <p className="text-lg text-gray-100 font-medium max-w-3xl mx-auto">
-              Real feedback from hotel professionals who attended our AI workshops.
+              Real feedback from hotel professionals who attended our AI workshops and implemented automation strategies.
             </p>
           </motion.div>
           
@@ -442,20 +483,27 @@ const WorkshopLanding = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl hover:border-oritech-red transition-all duration-300"
+                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl hover:border-oritech-red transition-all duration-300 hover:shadow-2xl"
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-gray-200 font-medium mb-6 italic text-lg leading-relaxed">
+                <blockquote className="text-gray-200 font-medium mb-6 italic text-base lg:text-lg leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="border-t border-gray-600 pt-4">
-                  <p className="text-white font-semibold mb-1">{testimonial.author}</p>
-                  <p className="text-gray-300 text-sm mb-2">{testimonial.hotel}</p>
-                  <p className="text-oritech-red font-bold text-sm">{testimonial.result}</p>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div>
+                      <p className="text-white font-semibold text-base">{testimonial.author}</p>
+                      <p className="text-gray-300 text-sm">{testimonial.position}</p>
+                      <p className="text-gray-400 text-xs">{testimonial.hotel}, {testimonial.location}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-oritech-red font-bold text-sm">{testimonial.result}</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -479,19 +527,40 @@ const WorkshopLanding = () => {
               Join 200+ hotel owners who've discovered how AI automation saves time and increases revenue without replacing staff.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <motion.button
-                onClick={reserveSeat}
-                className="bg-white text-oritech-red hover:bg-gray-100 font-bold px-10 py-5 lg:px-12 lg:py-6 rounded-lg text-xl lg:text-2xl transition-all duration-300 flex items-center gap-4 shadow-xl hover:shadow-2xl transform hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Calendar className="w-6 h-6 lg:w-7 lg:h-7" />
-                Reserve Your Free Seat
-              </motion.button>
+            <div className="bg-black bg-opacity-30 backdrop-blur-sm p-8 lg:p-10 rounded-2xl border border-white border-opacity-20 max-w-2xl mx-auto mb-8">
+              <h3 className="text-xl font-bold text-white mb-6">Your Free Workshop Includes:</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                  <span className="text-white font-medium text-sm">Custom 90-day AI roadmap</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                  <span className="text-white font-medium text-sm">Staff time savings calculator</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                  <span className="text-white font-medium text-sm">Priority use-case checklist</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
+                  <span className="text-white font-medium text-sm">Case study templates</span>
+                </div>
+              </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-white text-sm">
+            <motion.button
+              onClick={reserveSeat}
+              className="bg-white text-oritech-red hover:bg-gray-100 font-bold px-12 py-6 lg:px-16 lg:py-8 rounded-lg text-xl lg:text-2xl transition-all duration-300 flex items-center gap-4 shadow-xl hover:shadow-2xl transform hover:scale-105 mx-auto"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Calendar className="w-7 h-7 lg:w-8 lg:h-8" />
+              Reserve Your Free Seat Now
+              <ArrowRight className="w-7 h-7 lg:w-8 lg:h-8" />
+            </motion.button>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-white text-sm mt-6">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
                 <span>No credit card required</span>
@@ -502,7 +571,7 @@ const WorkshopLanding = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
-                <span>Custom 90-day roadmap included</span>
+                <span>Instant access to resources</span>
               </div>
             </div>
           </motion.div>
@@ -522,6 +591,9 @@ const WorkshopLanding = () => {
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
               Frequently Asked <span className="text-oritech-red">Questions</span>
             </h2>
+            <p className="text-lg text-gray-100 font-medium max-w-3xl mx-auto">
+              Everything you need to know about our AI workshop for hotels.
+            </p>
           </motion.div>
           
           <div className="max-w-4xl mx-auto space-y-6">
@@ -532,10 +604,10 @@ const WorkshopLanding = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl"
+                className="bg-black bg-opacity-80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 shadow-xl hover:border-oritech-red transition-all duration-300"
               >
-                <h3 className="text-lg lg:text-xl font-bold text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-200 font-medium leading-relaxed">{faq.answer}</p>
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-4">{faq.question}</h3>
+                <p className="text-gray-200 font-medium leading-relaxed text-base">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -554,33 +626,45 @@ const WorkshopLanding = () => {
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-black text-white heading-spacing text-shadow-lg">
               Don't Let Another Month Go By Without <span className="text-oritech-red">Hotel Automation</span>
             </h2>
-            <p className="text-lg lg:text-xl text-gray-100 font-medium mb-8 max-w-3xl mx-auto">
-              Every day without AI automation is lost revenue and wasted staff time. 
+            <p className="text-lg lg:text-xl text-gray-100 font-medium mb-8 max-w-4xl mx-auto">
+              Every day without AI automation is lost revenue, wasted staff time, and missed opportunities. 
               Get your personalized hotel AI roadmap in the next 45 minutes.
             </p>
             
-            <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 lg:p-12 rounded-2xl border border-gray-600 max-w-2xl mx-auto mb-8">
-              <h3 className="text-xl font-bold text-white mb-4">Your Free Workshop Includes:</h3>
-              <div className="space-y-3 text-left">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-oritech-red flex-shrink-0" />
-                  <span className="text-gray-200 font-medium">Custom 90-day AI implementation roadmap</span>
+            <div className="bg-black bg-opacity-80 backdrop-blur-sm p-8 lg:p-12 rounded-2xl border border-gray-600 max-w-3xl mx-auto mb-10 shadow-2xl">
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">What Makes This Workshop Different:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <Target className="w-6 h-6 text-oritech-red flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Hotel-Specific Focus</p>
+                      <p className="text-gray-200 text-sm">Only automation that works in hospitality</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <BarChart3 className="w-6 h-6 text-oritech-red flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Real Case Studies</p>
+                      <p className="text-gray-200 text-sm">Actual KPIs from hotel implementations</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-oritech-red flex-shrink-0" />
-                  <span className="text-gray-200 font-medium">Staff time savings calculator</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-oritech-red flex-shrink-0" />
-                  <span className="text-gray-200 font-medium">Priority use-case list for your property</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-oritech-red flex-shrink-0" />
-                  <span className="text-gray-200 font-medium">Hotel automation case study templates</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-oritech-red flex-shrink-0" />
-                  <span className="text-gray-200 font-medium">Direct access to AI for hotels expert</span>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <DollarSign className="w-6 h-6 text-oritech-red flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">ROI-Focused</p>
+                      <p className="text-gray-200 text-sm">Only strategies that pay for themselves</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Users className="w-6 h-6 text-oritech-red flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-semibold">Staff-Friendly</p>
+                      <p className="text-gray-200 text-sm">Automation that helps, not replaces</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -591,20 +675,24 @@ const WorkshopLanding = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Calendar className="w-7 h-7 lg:w-8 lg:h-8" />
+              <Calendar className="w-8 h-8" />
               Reserve Your Free Seat Now
-              <ArrowRight className="w-7 h-7 lg:w-8 lg:h-8" />
+              <ArrowRight className="w-8 h-8" />
             </motion.button>
             
             <p className="text-sm text-oritech-red font-bold mt-6 animate-pulse">
               🔥 Only 3 seats left for this Friday's session
+            </p>
+            
+            <p className="text-xs text-gray-300 font-medium mt-4">
+              Join hotel owners from 12+ countries who've already transformed their operations with AI automation
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Footer */}
-      <footer className="bg-oritech-black border-t border-gray-700 py-12">
+      <footer className="bg-oritech-black border-t border-gray-700 py-8 lg:py-12">
         <div className="text-container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
@@ -626,8 +714,8 @@ const WorkshopLanding = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p className="text-xs text-gray-400">
+          <div className="border-t border-gray-700 mt-8 pt-6 text-center">
+            <p className="text-xs text-gray-400 leading-relaxed">
               © 2025 OriTech AI. All rights reserved. | Helping hotels implement AI automation that actually works.
             </p>
           </div>
